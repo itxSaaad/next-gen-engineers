@@ -1,6 +1,6 @@
 # 01 — Code quality and Clean Code
 
-**Week 1 theme:** Build software that is maintainable before trying to scale it. Haseeb listed Clean Code, readability, maintainability, and technical debt as the week's learning topics.
+**Week 1 theme:** Build software that is maintainable before trying to scale it. Technical Leadership listed Clean Code, readability, maintainability, and technical debt as the week's learning topics.
 
 ## Readability and naming
 
@@ -28,4 +28,4 @@ Make failure explicit. Validate at boundaries, return/raise errors with enough c
 ## Sources
 
 - [Robert C. Martin, Clean Code overview](https://www.oreilly.com/library/view/clean-code-a/9780136083238/)
-- Hammad shared a Clean Code reading in Slack during Week 1; see the [program timeline](../00-program-guide.md) and [reported study log](07-research-log.md).
+- Team Member shared a Clean Code reading in technical discussions during Week 1; see the [program timeline](../00-program-guide.md) and [reported study log](07-research-log.md).

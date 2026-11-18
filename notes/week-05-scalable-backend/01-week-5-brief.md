@@ -1,20 +1,34 @@
-# 01 — Week 5 brief and production scenarios
+# 01 — Week 5 Brief: Production Scenarios & Deep Backend Engineering
 
-**Slack source:** Muhammad Haseeb Malik, [`#next-gen-engineers`, 2026-11-17](https://app.slack.com/archives/C0CA0S502AH/p1794929453790629). He asked the group to continue Week 4's scalable-backend topics, revisit them due to insufficient preparation, and go deeper instead of moving to a new topic.
+## Module Objective
 
-## Focus list from Haseeb
+Week 5 deepens scalable-backend architecture with a strict focus on production failure modes, concurrency, high-throughput caching, and API scalability. The curriculum standard requires justifying technical trade-offs with empirical metrics and defending system behavior under extreme failure scenarios.
 
-- Database design: relationships, normalization, constraints, indexes.
-- SQL performance: plans, N+1 problems, slow-query analysis.
-- Transactions/concurrency: ACID, isolation, locking, deadlocks, race conditions.
-- Connection pooling: sizing, connection limits, saturation.
-- Caching: Redis, TTLs, invalidation, consistency.
-- API scalability: pagination, filtering, rate limits, efficient responses.
-- System scaling: load balancing, horizontal scaling, workers.
-- Reliability/performance: load tests, bottlenecks, timeouts, retries, failure handling.
+---
 
-Apply the concepts to traffic spikes, duplicate updates, database overload, and Redis or app-instance failure. Haseeb asked participants to review Week 4 and bring the system diagram, technical decisions, and questions. Resources in his post: [System Design Primer](https://github.com/donnemartin/system-design-primer), [PostgreSQL connection guidance](https://wiki.postgresql.org/wiki/Number_Of_Database_Connections), and [Redis eviction docs](https://redis.io/docs/latest/develop/reference/eviction/).
+## Core Focus Topics
 
-On 2026-11-18, Haseeb shared a bare [YouTube link](https://www.youtube.com/watch?v=W4EwfEU8CGA), whose title is “Let’s Handle 1 Million Requests per Second, It’s Scarier Than You Think!” The Slack message had no accompanying description, so treat it as a current resource, not a change to the assignment scope.
+1. **Database Architecture & Query Optimization**: Relational schema modeling, normalization vs selective denormalization, composite indexing, and EXPLAIN ANALYZE execution plan breakdown.
+2. **Transactions & Concurrency Control**: ACID properties, isolation levels (Read Committed vs Repeatable Read vs Serializable), pessimistic (`SELECT FOR UPDATE`) vs optimistic locking, and deadlock resolution.
+3. **Database Connection Pooling**: Sizing formulas, client pool vs proxy pool (PgBouncer in transaction pooling mode), and connection saturation protection.
+4. **Redis Caching Architecture**: Hierarchical key design, tiered TTL policies, cache-aside vs write-through, stampede mitigation, and cache invalidation.
+5. **High-Volume API Scalability**: Keyset (cursor-based) pagination vs offset pagination, indexing for multi-attribute filtering, and payload compression.
+6. **Distributed Rate Limiting**: Token-Bucket and Sliding-Window algorithms implemented via atomic Redis Lua scripts with tiered rate policies.
+7. **Production Reliability & Outage Behavior**: Circuit breaker patterns, fail-open vs fail-closed strategies, and database load shedding during Redis outages.
 
-For each topic, explain the invariant, chosen mechanism, failure behavior, and measurable trade-off. Record actual work in the research log; the assignment post does not prove submitted deliverables or completed sessions.
+---
+
+## Production Stress Scenarios to Defend
+
+- **Traffic Spikes**: 10x traffic surges hitting uncached candidate assessment endpoints.
+- **Concurrent Submissions**: Multiple simultaneous submissions of the same assessment payload.
+- **Database Overload**: Connection exhaustion and runaway queries saturating CPU.
+- **Redis Outage**: Complete Redis node termination or network partition while maintaining high API availability.
+
+---
+
+## Recommended References
+- [System Design Primer](https://github.com/donnemartin/system-design-primer)
+- [PostgreSQL Connection Pool Sizing Guidance](https://wiki.postgresql.org/wiki/Number_Of_Database_Connections)
+- [Redis Memory Eviction & Key Expiration Policies](https://redis.io/docs/latest/develop/reference/eviction/)
+- [Designing for High Throughput (1M req/sec)](https://www.youtube.com/watch?v=W4EwfEU8CGA)

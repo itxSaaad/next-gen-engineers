@@ -1,6 +1,6 @@
 # Week 5 Assignment Deliverable: Redis Caching & API Scalability
 
-## Assignment Brief (Private Review by Muhammad Haseeb Malik)
+## Engineering Assignment Brief: Redis Caching & API Scalability
 
 > **Goal**: Design APIs for a platform receiving high request volumes, with frequently accessed candidate and assessment data. Explain what should be cached, how stale data is handled, and how the APIs remain reliable.
 

@@ -1,45 +1,50 @@
-# Week 1 — Engineering fundamentals and system design
+# Week 1 — Engineering Fundamentals & System Design
 
-**Source:** Muhammad Haseeb Malik, [`#next-gen-engineers`, 2026-10-20](https://app.slack.com/archives/C0CA0S502AH/p1792505770722239). Program kickoff was posted [2026-10-18](https://app.slack.com/archives/C0CA0S502AH/p1792348055844489).
-**Week leader:** Muhammad Arslan Waqar.
+## Curriculum Overview
 
-The kickoff's first assignment asked everyone to present one prior project, explain its architecture and decisions, and reason about scale, fault tolerance, database performance, caching, queues, observability, bottlenecks, and production improvements. Week 1 made this concrete with named system assignments below.
+Week 1 establishes foundational software engineering principles, clean code standards, architectural separation of concerns, and hands-on system architecture analysis.
 
-## Topics assigned
+The engineering focus is to present production architectures, explain architectural trade-offs, and reason through scalability, fault tolerance, database performance, caching layers, asynchronous queues, observability, and structural bottlenecks.
 
-- Clean Code principles and SOLID.
-- Loose vs. tight coupling; high cohesion and separation of concerns.
-- Layered architecture (Controller → Service → Repository) and dependency injection.
-- Readability, maintainability, and technical debt.
+---
 
-## System design work
+## Core Topics
 
-Each participant was to prepare a diagram for their assigned existing system, showing components, data flow, integrations, and how the week's principles apply:
+- **Clean Code & Readability**: Self-documenting code, cohesion, function complexity, and maintainable abstractions.
+- **SOLID Principles**: Practical application of Single Responsibility, Open/Closed, Liskov Substitution, Interface Segregation, and Dependency Inversion.
+- **Architectural Layering**: Decoupling Controller / Presentation → Service / Domain Logic → Repository / Persistence layers via Dependency Injection.
+- **Technical Debt Management**: Distinguishing deliberate architectural trade-offs from reckless code rot; refactoring strategies.
 
-- Muhammad Arslan Waqar — Lingopal / Prefect.
-- Hammad Mubeen — Lingopal / SQS.
-- Muhammad Saad Faisal — Bluesky / Paymentology.
-- Muhammad Muneeb — ShipIn.
+---
 
-Friday's shared case study: design a URL shortener, discussing URL generation, database design, redirects, caching, scalability, and failure handling. Haseeb later shared a requirement-extraction resource and two video links on 2026-10-21.
+## Production System Analysis Focus
 
-## Expectations
+Architectural diagrams and design reviews focus on production-grade systems across distinct distributed patterns:
 
-- Target: one hour daily (five hours weekly).
-- Explain design decisions and connect principles to the assigned system.
-- Share progress, questions, and blockers; explain the why behind choices.
-- Be ready to discuss increased traffic, failures, database performance, caching, queues, observability, and bottlenecks.
+1. **Financial Ledger & Payment Integration Engine (Bluesky / Paymentology)**: Double-entry ledger consistency, idempotent payment webhooks, replay safety, and database concurrency locks.
+2. **Distributed Workflow Engine (Prefect)**: Resilient task graph orchestration, worker heartbeat monitoring, and distributed task state tracking.
+3. **High-Throughput Queue Processing (SQS)**: Asynchronous event ingestion, dead-letter queue routing, and worker backpressure management.
+4. **Edge Telemetry Ingestion (ShipIn)**: Offline-capable edge buffering, intermittent network synchronization, and batch cloud ingestion.
 
-## Read in order
+---
 
-1. [Code quality and Clean Code](01-code-quality.md)
-2. [SOLID principles](02-solid-principles.md)
-3. [Architectural fundamentals](03-architectural-fundamentals.md)
-4. [Technical debt and maintainability](04-maintainability-and-debt.md)
-5. [Assigned systems and architecture diagrams](05-assigned-systems.md)
-6. [URL shortener case study](06-url-shortener.md)
-7. [Research log and reported activity](07-research-log.md)
+## Shared System Design Case Study: Distributed URL Shortener
 
-## Evidence and completion
+Design a high-scale URL Shortener service (e.g., bit.ly / tinyurl):
+- Short code generation algorithms (Base62 encoding vs MD5/SHA256 truncation vs KGS - Key Generation Service).
+- Database schema design, read/write ratio analysis (100:1 read-heavy), and indexing strategies.
+- HTTP redirect semantics (301 Permanent Redirect vs 302 Found) and their impact on analytics.
+- Redis caching layers, eviction policies (LRU), and cache stampede protection.
+- High availability, database sharding by hash prefix, and failure recovery.
 
-This captures the assignment and a study guide, not proof of completed research or diagrams. Add links to actual diagrams and session outcomes when available.
+---
+
+## Reading Guide
+
+1. [Code Quality & Clean Code](01-code-quality.md)
+2. [SOLID Principles in Production](02-solid-principles.md)
+3. [Architectural Fundamentals & Layering](03-architectural-fundamentals.md)
+4. [Technical Debt & Maintainability](04-maintainability-and-debt.md)
+5. [Production System Architectures & Reference Diagrams](05-assigned-systems.md)
+6. [Distributed URL Shortener Design](06-url-shortener.md)
+7. [Research Log & Technical Topics](07-research-log.md)

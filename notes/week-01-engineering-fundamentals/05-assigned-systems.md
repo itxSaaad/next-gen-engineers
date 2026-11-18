@@ -1,32 +1,32 @@
-# 02 — Assigned systems and architecture diagrams
+# 02 — Production System Architectures & Reference Diagrams
 
-Haseeb requested a diagram for each assigned system showing architecture, components, data flow, integrations, and how the week's engineering principles apply.
+A comprehensive engineering evaluation requires clear architecture diagrams showing components, data flow, external integrations, boundary contexts, and how foundational engineering principles apply.
 
-| Participant | Assigned system / focus |
-|---|---|
-| Muhammad Arslan Waqar | Lingopal — Prefect |
-| Hammad Mubeen | Lingopal — SQS |
-| Muhammad Saad Faisal | Bluesky — Paymentology |
-| Muhammad Muneeb | ShipIn |
+| Architecture Archetype | System Scope / Focus | Primary Technology Stack |
+|---|---|---|
+| Distributed Workflow Engine | Workflow orchestration & resilient task DAGs | Prefect, Python, PostgreSQL, Docker |
+| Asynchronous Queue Pipeline | High-throughput event publishing & dead-letter routing | AWS SQS, Celery, Redis |
+| **Financial Ledger & Payment Gateway** | **Double-entry consistency, idempotent payments, ledger auditing** | **FastAPI/Django, Paymentology API, PostgreSQL, Redis** |
+| Edge Telemetry Ingestion Platform | Intermittent connectivity, edge buffers, batch ingestion | Edge SQLite, MQTT, REST, AWS S3 |
 
-These are assignment labels from Slack. This guide does not assert product internals; diagrams should be based on verified system knowledge, with uncertain edges marked as assumptions.
+---
 
-## Diagramming sequence
+## Diagramming Standards & Methodology
 
-1. **Set scope:** user goal, system boundary, use cases, and non-goals.
-2. **List actors/components:** client, API, identity provider, services, database, cache, queue, worker, and external integrations where applicable.
-3. **Draw flows:** distinguish request/response from async messages; show data ownership and direction.
-4. **Annotate state/failure:** persistence points, retries, duplicates, timeouts, bottlenecks, and recovery.
-5. **Explain choices:** why a component exists, which quality attribute it supports, cost, and alternative.
-6. **Connect principles:** ownership boundaries, cohesive modules, dependency direction, and test seams.
+1. **System Scope & Boundary**: Explicitly document user actors, system boundaries, use cases, and non-goals.
+2. **Components & Interfaces**: Differentiate API gateways, application services, persistence layers (PostgreSQL), memory stores (Redis), message queues (SQS/Celery), and external third-party processors (e.g. Paymentology).
+3. **Data Flows & Protocols**: Distinguish synchronous HTTP/REST from asynchronous events; document payload schemas and direction of ownership.
+4. **Resilience & Failure Topography**: Annotate persistence points, retry mechanisms, idempotency keys, timeout budgets, circuit breakers, and dead-letter queues.
+5. **Architectural Trade-offs**: Justify why each component is chosen over alternatives, identifying latency, consistency, and operational cost boundaries.
+6. **Code & Structural Principles**: Enforce single-responsibility modules, loose coupling via Dependency Injection, and strict separation between domain logic and external infrastructure.
 
-Walk through one normal request, then a failure path and a load spike. State which component is the source of truth. Label unknown internals as assumptions; do not present guesses as facts.
+---
 
-## Review checklist
+## Review Checklist
 
-- [ ] System boundaries and user goals are clear.
-- [ ] Data flows and integrations are labeled.
-- [ ] Synchronous and asynchronous work are distinguishable.
-- [ ] Failure, retry, duplicate, and recovery paths are shown.
-- [ ] Bottlenecks and scaling points have rationale.
-- [ ] Design choices include trade-offs and evidence.
+- [ ] System boundaries and client entry points are clearly delimited.
+- [ ] Data flows and third-party integrations are explicitly labeled with protocol and payload direction.
+- [ ] Synchronous RPC paths and asynchronous message queues are clearly differentiated.
+- [ ] Failure recovery, exponential backoff retries, and idempotency mechanisms are documented.
+- [ ] Bottlenecks, database lock contention points, and horizontal scaling tiers have documented rationales.
+- [ ] All architectural decisions include measurable trade-offs and mitigation plans.

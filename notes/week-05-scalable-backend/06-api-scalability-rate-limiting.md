@@ -3,7 +3,7 @@
 Bound API work and response size: cap page size, validate filters/sort fields, fetch needed columns, batch related lookups, and set deadlines. Offset pagination is simple but deep offsets scan/discard rows and can drift under concurrent writes. Cursor/keyset pagination uses a stable order plus unique tie-breaker for efficient traversal.
 
 ## Distributed API rate limiter discussion
-Haseeb's Week 4 assignment named this as Friday's system-design discussion. Be prepared to compare:
+The technical curriculum's Week 4 assignment named this as Friday's system-design discussion. Be prepared to compare:
 - **Fixed window:** simplicity vs boundary bursts.
 - **Sliding window:** smoother limits vs additional state/work.
 - **Token bucket:** controlled bursts with a sustained refill rate.

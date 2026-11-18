@@ -18,4 +18,4 @@ Measure reconnect rate, requests per client, upload backlog size, oldest pending
 
 - [Microsoft transient-fault handling](https://learn.microsoft.com/en-us/azure/architecture/best-practices/transient-faults)
 - [Microsoft retry pattern](https://learn.microsoft.com/en-us/azure/architecture/patterns/retry)
-- [Haseeb's Week 2 brief](../week-02-reliable-desktop-sync/README.md)
+- [The technical curriculum's Week 2 brief](../week-02-reliable-desktop-sync/README.md)

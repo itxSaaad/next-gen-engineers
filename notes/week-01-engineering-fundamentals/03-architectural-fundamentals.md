@@ -1,6 +1,6 @@
 # 03 — Architectural fundamentals
 
-Haseeb's Week 1 agenda named loose coupling, high cohesion, separation of concerns, layered architecture, and dependency injection. The kickoff also asked everyone to explain system components and communication in one prior project.
+The technical curriculum's Week 1 agenda named loose coupling, high cohesion, separation of concerns, layered architecture, and dependency injection. The kickoff also asked everyone to explain system components and communication in one prior project.
 
 ## Separation of concerns, cohesion, and coupling
 

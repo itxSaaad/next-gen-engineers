@@ -2,7 +2,7 @@
 
 ## Guide research — 2026-11-18
 
-Reviewed PostgreSQL documentation on plans, statistics, transactions, and locking; Redis documentation on cache-aside, eviction, and rate limiting; RFC 9110; AWS transactional outbox guidance; and Microsoft architecture/reliability patterns. Chapters synthesize those sources against Haseeb's Week 5 scope. No load test, production experiment, or participant deliverable is claimed.
+Reviewed PostgreSQL documentation on plans, statistics, transactions, and locking; Redis documentation on cache-aside, eviction, and rate limiting; RFC 9110; AWS transactional outbox guidance; and Microsoft architecture/reliability patterns. Chapters synthesize those sources against The technical curriculum's Week 5 scope. No load test, production experiment, or participant deliverable is claimed.
 
 Use one entry per study session. Keep claims linked to sources; distinguish what the source says from our design decisions.
 

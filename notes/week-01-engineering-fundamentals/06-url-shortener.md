@@ -1,6 +1,6 @@
 # 03 — System design case study: URL shortener
 
-Haseeb's Week 1 discussion asked for URL generation, database design, redirects, caching, scalability, and failure handling. On 2026-10-21 he emphasized requirement extraction and shared an [article](https://medium.com/@sugamsays/design-a-url-shortener-bit-ly-tinyurl-e5351ccad56e), [video 1](https://www.youtube.com/watch?v=16d35un5a9Q), and [video 2](https://www.youtube.com/watch?v=9OtPnpTiLag).
+The technical curriculum's Week 1 discussion asked for URL generation, database design, redirects, caching, scalability, and failure handling. On 2026-10-21 he emphasized requirement extraction and shared an [article](https://medium.com/@sugamsays/design-a-url-shortener-bit-ly-tinyurl-e5351ccad56e), [video 1](https://www.youtube.com/watch?v=16d35un5a9Q), and [video 2](https://www.youtube.com/watch?v=9OtPnpTiLag).
 
 ## Requirements first
 

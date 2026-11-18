@@ -4,13 +4,13 @@
 
 Reviewed PostgreSQL documentation for query plans, statistics, indexes, and transaction isolation; Redis guidance for cache-aside, eviction, and distributed rate limiting; and Microsoft/AWS architecture references for background work, retries, circuit breakers, and outbox processing. The chapters synthesize design guidance against the assignment; no benchmark or implementation test was run.
 
-## Slack-reported study updates
+## Reported study updates
 
-- **2026-11-11:** Muneeb reported database design/relationships/normalization/indexes, query execution, slow queries/N+1, transactions/ACID/isolation/deadlocks/safe updates. Saad reported indexing, query optimization, pooling, caching, and concurrent-request/database-pressure concerns. Haseeb shared a [modern web architecture article](https://medium.com/womenintechnology/modern-web-architecture-101-b430df7b9d8e).
-- **2026-11-12:** Muneeb reported deeper database optimization/design. Hammad reported cache stampede: many requests can hit the backend/DB together after a popular cache entry expires. Saad reported comparing ECS/EC2/EKS and Fargate/Lambda/EC2 by workload, control, and scaling requirements.
+- **2026-11-11:** Team Member reported database design/relationships/normalization/indexes, query execution, slow queries/N+1, transactions/ACID/isolation/deadlocks/safe updates. Saad reported indexing, query optimization, pooling, caching, and concurrent-request/database-pressure concerns. Technical Leadership shared a [modern web architecture article](https://medium.com/womenintechnology/modern-web-architecture-101-b430df7b9d8e).
+- **2026-11-12:** Team Member reported deeper database optimization/design. Team Member reported cache stampede: many requests can hit the backend/DB together after a popular cache entry expires. Saad reported comparing ECS/EC2/EKS and Fargate/Lambda/EC2 by workload, control, and scaling requirements.
 - **2026-11-13:** Saad posted CAP theorem and CDC vs. SCD as topics.
 
-These are participant-reported subjects, not evidence that a design was validated. Sources: [Nov 11 standup](https://app.slack.com/archives/C0CA0S502AH/p1794402014701879), [Nov 12 standup](https://app.slack.com/archives/C0CA0S502AH/p1794488426423879), [Nov 13 topic post](https://app.slack.com/archives/C0CA0S502AH/p1794578452123519).
+These are participant-reported subjects, not evidence that a design was validated. Sources: [Nov 11 standup](#), [Nov 12 standup](#), [Nov 13 topic post](#).
 
 ### Session template
 

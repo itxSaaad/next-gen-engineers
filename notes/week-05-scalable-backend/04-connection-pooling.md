@@ -1,6 +1,6 @@
 # 04 — Connection pooling and saturation
 
-Haseeb calls out pool sizing, DB connection limits, and saturation. Pooling reuses connections; it does not increase safe DB concurrency. Too large a pool increases DB contention; too small queues requests. See [Week 4 foundations](../week-04-scalable-backend/03-connection-pooling.md).
+Technical Leadership calls out pool sizing, DB connection limits, and saturation. Pooling reuses connections; it does not increase safe DB concurrency. Too large a pool increases DB contention; too small queues requests. See [Week 4 foundations](../week-04-scalable-backend/03-connection-pooling.md).
 
 ## Sizing model
 

@@ -1,6 +1,6 @@
 # 08 — System design deliverables and technical decisions
 
-Haseeb requested a diagram with clients, load balancer, application instances, APIs, cache, database, background workers, request flow, bottlenecks, and scaling points. The technical document must explain schema/indexes/constraints, query optimization, transactions, pooling, caching, API/rate limiting, scaling, failure handling, testing, and alternatives.
+Technical Leadership requested a diagram with clients, load balancer, application instances, APIs, cache, database, background workers, request flow, bottlenecks, and scaling points. The technical document must explain schema/indexes/constraints, query optimization, transactions, pooling, caching, API/rate limiting, scaling, failure handling, testing, and alternatives.
 
 ## Design document template
 

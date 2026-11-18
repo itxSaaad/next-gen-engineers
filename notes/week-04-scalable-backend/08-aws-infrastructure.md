@@ -1,6 +1,6 @@
 # 08 — AWS infrastructure and compute choices
 
-**Scope provenance:** The five-module AWS masterclass outline below comes from the expanded study material supplied for this guide. Haseeb's Slack assignment specifically required scalable backend design; it did not itself list every service in this chapter. Use this as a study checklist and validate service fit against current AWS documentation and workload constraints.
+**Scope provenance:** The five-module AWS masterclass outline below comes from the expanded study material supplied for this guide. The technical curriculum's Internal Collaboration assignment specifically required scalable backend design; it did not itself list every service in this chapter. Use this as a study checklist and validate service fit against current AWS documentation and workload constraints.
 
 ## Start from requirements
 

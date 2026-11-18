@@ -1,6 +1,6 @@
 # Next-Gen Engineers — System Architecture & Engineering Leadership
 
-Welcome to the **Next-Gen Engineers** repository by Muhammad Saad. This repository houses the curriculum notes, production architecture blueprints, weekly engineering deliverables, and hands-on implementations for the system design and leadership program led by Muhammad Haseeb Malik.
+Welcome to the **Next-Gen Engineers** repository. This repository houses the curriculum notes, production architecture blueprints, weekly engineering deliverables, and hands-on implementations for advanced system design, distributed data synchronization, and scalable cloud backends.
 
 ---
 
@@ -16,21 +16,12 @@ next-gen-engineers/
 │   ├── week-04-scalable-backend/
 │   └── week-05-scalable-backend/
 │
-├── week-04-scalable-backend/               # Week 4 Assignment Deliverable
-│   ├── README.md
-│   ├── technical-design-doc.md             # Scalable backend system design document & architecture
-│   └── distributed-rate-limiter/           # Distributed rate limiter implementation & benchmarks
-│
-├── week-05-redis-caching-scalability/      # Week 5 Assignment Deliverable (Haseeb's Core Brief)
-│   ├── README.md
-│   ├── technical-design-doc.md             # In-depth design: Endpoints, Caching, Rate Limiting, Failure Recovery
-│   └── implementation/                     # Production-grade working implementation (FastAPI, Redis, Docker)
-│       ├── app/
-│       ├── tests/
-│       └── docker-compose.yml
-│
-└── capstone-project/                       # Capstone Project & Final Production System Deliverable
-    └── README.md
+├── week-01-engineering-fundamentals/      # Week 1 Assignment Deliverables (System Design & Clean Code)
+├── week-02-reliable-desktop-sync/         # Week 2 Assignment Deliverables (Offline-First Sync Engine)
+├── week-03-data-consistency-security/     # Week 3 Assignment Deliverables (Data Consistency & Security)
+├── week-04-scalable-backend/              # Week 4 Assignment Deliverable (Scalable Backend & Pooling)
+├── week-05-redis-caching-scalability/     # Week 5 Assignment Deliverable (Redis Caching & API Scalability)
+└── capstone-project/                      # Capstone Project & Production System
 ```
 
 ---

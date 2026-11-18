@@ -6,7 +6,7 @@ No distinct weekly assignment was found. The topic scope here comes from reporte
 
 Consulted HTTP semantics, Microsoft idempotent-consumer and transient-fault guidance. These sources ground the explanations in chapters 02–04; no implementation test is claimed.
 
-## Slack-reported study dates
+## Reported study dates
 
 - 2026-11-02: idempotency, deduplication, revisions/ETags, ordering, fencing tokens.
 - 2026-11-03 to 2026-11-04: object authorization, token expiry, local storage, API security, code isolation.
